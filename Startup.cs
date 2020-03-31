@@ -25,9 +25,21 @@ namespace Covid_Alert
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            //if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
             services.AddDbContext<CustomerInfoDbContext>(options =>
-                options.UseInMemoryDatabase("name"));
+                options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
+            //else
+            //    services.AddDbContext<CustomerInfoDbContext>(options =>
+            //    options.UseInMemoryDatabase("name"));
+
+            // Automatically perform database migration
+            services.BuildServiceProvider().GetService<CustomerInfoDbContext>().Database.Migrate();
+            services.AddScoped<CustomerInfoDbContext>();
+            services.AddHostedService<Alerting.Alerting>();
+            
             services.AddRazorPages();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

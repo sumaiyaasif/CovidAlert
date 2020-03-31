@@ -36,7 +36,7 @@ namespace Covid_Alert.Pages
                 return Page();
             }
 
-            _context.Customers.Add(CustomerInfo);
+            _context.CustomerInfo.Add(CustomerInfo);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

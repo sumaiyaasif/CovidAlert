@@ -23,7 +23,7 @@ namespace Covid_Alert.Pages
 
         public async Task OnGetAsync()
         {
-            CustomerInfo = await _context.Customers.ToListAsync();
+            CustomerInfo = await _context.CustomerInfo.ToListAsync();
         }
     }
 }

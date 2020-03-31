@@ -10,6 +10,6 @@ namespace RazorPagesContacts.Data
         {
         }
 
-        public DbSet<CustomerInfo> Customers { get; set; }
+        public DbSet<CustomerInfo> CustomerInfo { get; set; }
     }
 }

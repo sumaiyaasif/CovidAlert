@@ -160,3 +160,4 @@
 /Users/sumaiyaasif/Projects/Covid-Alert/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/sumaiyaasif/Projects/Covid-Alert/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs
 /Users/sumaiyaasif/Projects/Covid-Alert/obj/Debug/netcoreapp3.1/Razor/Pages/Create.cshtml.g.cs
+/Users/sumaiyaasif/Projects/Covid-Alert/bin/Debug/netcoreapp3.1/SendGrid.dll

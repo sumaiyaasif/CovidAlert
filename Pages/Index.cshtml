@@ -2,7 +2,6 @@
 @model Covid_Alert.Pages.IndexModel
 
 @{
-    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -22,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.CustomerInfo[0].Name)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerInfo[0].Email)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -30,6 +32,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
