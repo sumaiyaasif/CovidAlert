@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'covidalerts'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6748400539ab4904893da11e5c2a7709 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1edb23eb0c644d8a9fc7fcb0dcf9ec85 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
