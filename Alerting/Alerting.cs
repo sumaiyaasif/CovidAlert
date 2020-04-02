@@ -53,7 +53,7 @@ namespace Covid_Alert.Alerting
         static async Task Execute(string recepiantEmail, string recepiantName, string location, StateStats stateOfInterest)
         {
             var apiKey = Environment.GetEnvironmentVariable("NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY");
-            var client = new SendGridClient("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");
+            var client = new SendGridClient("s");
             var from = new EmailAddress("sumaiya.aa@gmail.com", "Queen Sumaiya");
             var subject = "COVID-19 Case Number Update";
             var to = new EmailAddress(recepiantEmail, recepiantName);
