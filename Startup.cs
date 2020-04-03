@@ -34,7 +34,6 @@ namespace Covid_Alert
             //    options.UseInMemoryDatabase("name"));
 
             // Automatically perform database migration
-            services.BuildServiceProvider().GetService<CustomerInfoDbContext>().Database.Migrate();
             services.AddScoped<CustomerInfoDbContext>();
             services.AddHostedService<Alerting.Alerting>();
             
@@ -45,6 +44,11 @@ namespace Covid_Alert
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService<CustomerInfoDbContext>();
+                context.Database.Migrate();
+            }
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

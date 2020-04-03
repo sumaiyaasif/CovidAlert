@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{53780AE4-F5E8-4237-84DB-B7DA56CE8028}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
     <Files>
-      <File FileName="Startup.cs" Line="38" Column="57" />
+      <File FileName="Startup.cs" Line="34" Column="56" />
       <File FileName="Pages/Error.cshtml" Line="1" Column="1" />
       <File FileName="CustomerInfoDbContext.cs" Line="15" Column="2" />
       <File FileName="CustomerInfo.cs" Line="16" Column="2" />
@@ -17,9 +17,10 @@
       <File FileName="Migrations/20200329161100_inital.cs" Line="1" Column="1" />
       <File FileName="Migrations/CustomerInfoDbContextModelSnapshot.cs" Line="1" Column="1" />
       <File FileName="CovidApi/StateData.cs" Line="12" Column="10" />
-      <File FileName="Alerting/Alerting.cs" Line="37" Column="32" />
+      <File FileName="Alerting/Alerting.cs" Line="56" Column="47" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="2" Column="249" />
+      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,7 +34,10 @@
                 <Node name="Create.cshtml" expanded="True" />
                 <Node name="Index.cshtml" expanded="True" />
               </Node>
-              <Node name="appsettings.json" expanded="True" selected="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
