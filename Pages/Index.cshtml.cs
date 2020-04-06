@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Covid_Alert.CovidApi;
+using Covid_Stats.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +14,20 @@ namespace Covid_Alert.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesContacts.Data.CustomerInfoDbContext _context;
 
-        public IndexModel(RazorPagesContacts.Data.CustomerInfoDbContext context)
+        public IndexModel()
         {
-            _context = context;
+
         }
 
-        public IList<CustomerInfo> CustomerInfo { get;set; }
-
+        public IEnumerable<StateStats> statesInfo { get; set; }
+        StateData stateData = new StateData();
         public async Task OnGetAsync()
         {
-            CustomerInfo = await _context.CustomerInfo.ToListAsync();
+            statesInfo = stateData.GetStateStats().Result;
+            await Task.CompletedTask;
         }
+
+
     }
 }

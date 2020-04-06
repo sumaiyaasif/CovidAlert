@@ -1,28 +1,8 @@
 ﻿<Properties StartupConfiguration="{53780AE4-F5E8-4237-84DB-B7DA56CE8028}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CovidApi/StateData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
     <Files>
-      <File FileName="Startup.cs" Line="50" Column="1" />
-      <File FileName="Pages/Error.cshtml" Line="1" Column="1" />
-      <File FileName="CustomerInfoDbContext.cs" Line="15" Column="2" />
-      <File FileName="CustomerInfo.cs" Line="16" Column="2" />
-      <File FileName="Pages/Create.cshtml.cs" Line="27" Column="10" />
-      <File FileName="Program.cs" Line="17" Column="1" />
-      <File FileName="Pages/Index.cshtml" Line="4" Column="3" />
-      <File FileName="Pages/Create.cshtml" Line="4" Column="3" />
-      <File FileName="Pages/Shared/_Layout.cshtml" Line="27" Column="15" />
-      <File FileName="Pages/Create.cshtml.cs" Line="40" Column="47" />
-      <File FileName="Pages/Privacy.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Migrations/20200329161100_inital.cs" Line="1" Column="1" />
-      <File FileName="Migrations/CustomerInfoDbContextModelSnapshot.cs" Line="1" Column="1" />
-      <File FileName="CovidApi/StateData.cs" Line="4" Column="30" />
-      <File FileName="Alerting/Alerting.cs" Line="42" Column="77" />
+      <File FileName="appsettings.json" Line="3" Column="24" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="3" Column="164" />
-      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="Models/StateStats.cs" Line="16" Column="37" />
-      <File FileName="Models/CovidStats.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,16 +10,15 @@
           <Node name="Covid-Alert" expanded="True">
             <Node name="Covid-Alert" expanded="True">
               <Node name="Alerting" expanded="True" />
-              <Node name="CovidApi" expanded="True">
-                <Node name="StateData.cs" selected="True" />
-              </Node>
+              <Node name="CovidApi" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True" />
                 <Node name="Create.cshtml" expanded="True" />
                 <Node name="Index.cshtml" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
@@ -49,9 +28,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/sumaiyaasif/Projects/Covid-Alert/Alerting/Alerting.cs" relfile="Alerting/Alerting.cs" line="41" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Covid-Alert PreferredExecutionTarget="/Applications/Google Chrome.app" />

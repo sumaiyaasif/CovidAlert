@@ -12,34 +12,37 @@
     <title>Index</title>
 </head>
 <body>
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CustomerInfo[0].Name)
+                @Html.DisplayNameFor(model => model.statesInfo.First().state)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CustomerInfo[0].Email)
+                @Html.DisplayNameFor(model => model.statesInfo.First().positive)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.statesInfo.First().recovered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statesInfo.First().death)
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.CustomerInfo) {
+@foreach (var item in Model.statesInfo) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.state)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.positive)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.recovered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.death)
             </td>
         </tr>
 }
