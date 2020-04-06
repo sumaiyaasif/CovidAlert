@@ -71,7 +71,7 @@ namespace Covid_Alert.Alerting
                 try
                 {
                     // every hour
-                    await Task.Delay(600000);
+                    await Task.Delay(3600000);
                     await OnGetAsync(cancellationToken);
                 }
                 catch (Exception ex)
