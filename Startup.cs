@@ -60,7 +60,6 @@ namespace Covid_Alert
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
