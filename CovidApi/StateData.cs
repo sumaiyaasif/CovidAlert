@@ -17,7 +17,7 @@ namespace Covid_Alert.CovidApi
         public async Task<IEnumerable<StateStats>> GetStateStats()
         {
             string stateStats;
-            var response = await client.GetAsync("https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest?iso2=US");
+            var response = await client.GetAsync("https://covidtracking.com/api/states");
             if (response.IsSuccessStatusCode)
             {
                 stateStats = response.Content.ReadAsStringAsync().Result;

@@ -43,7 +43,8 @@ namespace Covid_Alert.Alerting
 
                 foreach (var recipient in CustomerList)
                 {
-                    StateStats stateOfInterest = statesInfo.First(x => x.provincestate == recipient.State);
+                    Console.WriteLine("in background task");
+                    StateStats stateOfInterest = statesInfo.First(x => x.state == recipient.State);
                     Execute(recipient.Email, recipient.Name, recipient.State, stateOfInterest).Wait();
                 }
                 await Task.CompletedTask;
@@ -52,13 +53,13 @@ namespace Covid_Alert.Alerting
 
         static async Task Execute(string recepiantEmail, string recepiantName, string location, StateStats stateOfInterest)
         {
-            var apiKey = Environment.GetEnvironmentVariable("NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY");
-            var client = new SendGridClient("s");
+            var apiKey = Environment.GetEnvironmentVariable("covidApiKey");
+            var client = new SendGridClient(apiKey);
             var from = new EmailAddress("sumaiya.aa@gmail.com", "Queen Sumaiya");
             var subject = "COVID-19 Case Number Update";
             var to = new EmailAddress(recepiantEmail, recepiantName);
             var plainTextContent = location + " :  and easy to do anywhere, even with C#";
-            var htmlContent = "<strong>" + location + "</strong><p>confirmed:" + stateOfInterest.confirmed + "</p><p> deaths: " + stateOfInterest.deaths + "</p><p> recovered: " + stateOfInterest.recovered + "</p>";
+            var htmlContent = "<strong>" + location + "</strong><p>confirmed:" + stateOfInterest.positive + "</p><p> deaths: " + stateOfInterest.death + "</p><p> recovered: " + stateOfInterest.recovered + "</p>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             var response = await client.SendEmailAsync(msg);
         }
@@ -69,6 +70,8 @@ namespace Covid_Alert.Alerting
             {
                 try
                 {
+                    // every hour
+                    await Task.Delay(600000);
                     await OnGetAsync(cancellationToken);
                 }
                 catch (Exception ex)
