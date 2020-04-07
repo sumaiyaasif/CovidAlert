@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{53780AE4-F5E8-4237-84DB-B7DA56CE8028}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Create.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="appsettings.json" Line="14" Column="1" />
-      <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="Alerting/Alerting.cs" Line="74" Column="45" />
-      <File FileName="Pages/Create.cshtml" Line="50" Column="58" />
+      <File FileName="appsettings.Development.json" />
+      <File FileName="Alerting/Alerting.cs" />
+      <File FileName="Pages/Create.cshtml" />
       <File FileName="Startup.cs" Line="34" Column="56" />
-      <File FileName="Pages/Index.cshtml.cs" Line="1" Column="1" />
-      <File FileName="Pages/Index.cshtml" Line="17" Column="13" />
-      <File FileName="Pages/Create.cshtml.cs" Line="34" Column="1" />
+      <File FileName="Pages/Index.cshtml.cs" />
+      <File FileName="Pages/Index.cshtml" />
+      <File FileName="Pages/Create.cshtml.cs" />
+      <File FileName="Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,11 +21,12 @@
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="Shared" expanded="True" />
-                <Node name="Create.cshtml" expanded="True" selected="True" />
+                <Node name="Create.cshtml" expanded="True" />
                 <Node name="Index.cshtml" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -42,7 +42,10 @@ namespace Covid_Alert.Alerting
                 foreach (var recipient in CustomerList)
                 {
                     Console.WriteLine("in background task");
-                    StateStats stateOfInterest = statesInfo.First(x => x.state == recipient.State);
+                    Console.WriteLine("BEFORE email: " + recipient.Email);
+                    StateStats stateOfInterest = statesInfo.FirstOrDefault(x => x.state == recipient.State.ToUpper());
+                    Console.WriteLine("email: " + recipient.Email);
+                    Console.WriteLine("stateOfInterest: " + stateOfInterest.state);
                     Execute(recipient.Email, recipient.Name, recipient.State, stateOfInterest).Wait();
                 }
                 await Task.CompletedTask;
