@@ -3,3 +3,4 @@ appsettings.Development.json
 .vs/Covid-Alert/xs/UserPrefs.xml
 .vs/Covid-Alert/xs/project-cache/Covid-Alert-Debug.json
 obj/Release/.DS_Store
+appsettings.json
