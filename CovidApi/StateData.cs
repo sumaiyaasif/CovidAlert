@@ -6,7 +6,7 @@ using Covid_Stats.Models;
 
 namespace Covid_Alert.CovidApi
 {
-    public class StateData
+    public class StateData : IStateData
     {
         public StateData()
         {
@@ -25,5 +25,10 @@ namespace Covid_Alert.CovidApi
             }
             return await Task.FromResult(stateStats1);
         }
+    }
+
+    public interface IStateData
+    {
+        public Task<IEnumerable<StateStats>> GetStateStats();
     }
 }

@@ -18,7 +18,7 @@ namespace Covid_Alert.Alerting
     public class Alerting : BackgroundService, IHostedService
     {
         
-        StateData stateData = new StateData();
+        //StateData stateData = new StateData();
 
         public IList<CustomerInfo> CustomerList { get; set; }
         public IServiceProvider Services { get; }
@@ -37,6 +37,8 @@ namespace Covid_Alert.Alerting
                         .GetRequiredService<CustomerInfoDbContext>();
 
                 CustomerList = await dbContext.CustomerInfo.ToListAsync();
+                //IEnumerable<StateStats> statesInfo = stateData.GetStateStats().Result;
+                IStateData stateData = scope.ServiceProvider.GetRequiredService<IStateData>();
                 IEnumerable<StateStats> statesInfo = stateData.GetStateStats().Result;
 
                 foreach (var recipient in CustomerList)

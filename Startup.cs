@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesContacts.Data;
+using Covid_Alert.CovidApi;
 
 namespace Covid_Alert
 {
@@ -35,6 +36,7 @@ namespace Covid_Alert
 
             // Automatically perform database migration
             services.AddScoped<CustomerInfoDbContext>();
+            services.AddScoped<IStateData, StateData>();
             services.AddHostedService<Alerting.Alerting>();
             
             services.AddRazorPages();
