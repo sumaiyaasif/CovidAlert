@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'covid-alert'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5cf64737032d44a3b04e4fb13583700a }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_669d71db740e4612bbd1ba24f02b3e5f }}
         package: ${{env.DOTNET_ROOT}}/myapp 
