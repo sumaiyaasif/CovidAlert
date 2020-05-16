@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,12 +23,8 @@ namespace Covid_Alert
         public void ConfigureServices(IServiceCollection services)
         {
             
-            //if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
             services.AddDbContext<CustomerInfoDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
-            //else
-            //    services.AddDbContext<CustomerInfoDbContext>(options =>
-            //    options.UseInMemoryDatabase("name"));
 
             // Automatically perform database migration
             services.AddScoped<CustomerInfoDbContext>();

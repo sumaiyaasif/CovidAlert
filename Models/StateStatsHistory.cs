@@ -3,34 +3,36 @@ namespace Covid_Stats.Models
 {
     public class StateStats
     {
-        public string state { get; set; }
-        public int? positive { get; set; }
-        public int positiveScore { get; set; }
-        public int negativeScore { get; set; }
-        public int negativeRegularScore { get; set; }
-        public int commercialScore { get; set; }
-        public string grade { get; set; }
-        public int score { get; set; }
-        public int negative { get; set; }
-        public int? pending { get; set; }
-        public int? hospitalizedCurrently { get; set; }
-        public int? hospitalizedCumulative { get; set; }
-        public int? inIcuCurrently { get; set; }
-        public int? inIcuCumulative { get; set; }
-        public int? onVentilatorCurrently { get; set; }
-        public int? onVentilatorCumulative { get; set; }
-        public int? recovered { get; set; }
-        public string lastUpdateEt { get; set; }
-        public string checkTimeEt { get; set; }
-        public int? death { get; set; }
-        public int? hospitalized { get; set; }
-        public int total { get; set; }
-        public int totalTestResults { get; set; }
-        public int posNeg { get; set; }
-        public string fips { get; set; }
-        public DateTime dateModified { get; set; }
-        public DateTime dateChecked { get; set; }
-        public string notes { get; set; }
-        public string hash { get; set; }
+        public string State { get; set; }
+        public long Positive { get; set; }
+        public long? PositiveScore { get; set; }
+        public long? NegativeScore { get; set; }
+        public long? NegativeRegularScore { get; set; }
+        public long? CommercialScore { get; set; }
+        public string? Grade { get; set; }
+        public long? Score { get; set; }
+        public string Notes { get; set; }
+        public string DataQualityGrade { get; set; }
+        public long? Negative { get; set; }
+        public long? Pending { get; set; }
+        public long? HospitalizedCurrently { get; set; }
+        public long? HospitalizedCumulative { get; set; }
+        public long? InIcuCurrently { get; set; }
+        public long? InIcuCumulative { get; set; }
+        public long? OnVentilatorCurrently { get; set; }
+        public long? OnVentilatorCumulative { get; set; }
+        public long? Recovered { get; set; }
+        public string LastUpdateEt { get; set; }
+        public string CheckTimeEt { get; set; }
+        public long Death { get; set; }
+        public long? Hospitalized { get; set; }
+        public long Total { get; set; }
+        public long TotalTestResults { get; set; }
+        public long PosNeg { get; set; }
+        public string Fips { get; set; }
+        public DateTimeOffset DateModified { get; set; }
+        public DateTimeOffset DateChecked { get; set; }
+        public string Hash { get; set; }
     }
+
 }

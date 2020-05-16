@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <StartAction>Project</StartAction>
+    <ExternalConsole>true</ExternalConsole>
+    <EnvironmentVariables>
+      <Variable name="covidApiKey" value="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" xmlns="" />
+      <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" xmlns="" />
+    </EnvironmentVariables>
+    <ApplicationURL>https://localhost:5001;http://localhost:5000</ApplicationURL>
+  </PropertyGroup>
+</Project>

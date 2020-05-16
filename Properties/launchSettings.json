@@ -1,7 +1,7 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:6995",
       "sslPort": 44322
@@ -18,10 +18,11 @@
     "Covid_Alert": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
+        "covidApiKey": "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",
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }
   }
 }

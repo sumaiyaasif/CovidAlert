@@ -16,16 +16,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.statesInfo.First().state)
+                @Html.DisplayNameFor(model => model.statesInfo.First().State)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.statesInfo.First().positive)
+                @Html.DisplayNameFor(model => model.statesInfo.First().Positive)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.statesInfo.First().recovered)
+                @Html.DisplayNameFor(model => model.statesInfo.First().Recovered)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.statesInfo.First().death)
+                @Html.DisplayNameFor(model => model.statesInfo.First().Death)
             </th>
         </tr>
     </thead>
@@ -33,16 +33,16 @@
 @foreach (var item in Model.statesInfo) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.state)
+                @Html.DisplayFor(modelItem => item.State)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.positive)
+                @Html.DisplayFor(modelItem => item.Positive)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.recovered)
+                @Html.DisplayFor(modelItem => item.Recovered)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.death)
+                @Html.DisplayFor(modelItem => item.Death)
             </td>
         </tr>
 }
